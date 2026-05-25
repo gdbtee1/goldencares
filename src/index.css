@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@layer components {
+  .soft-card {
+    @apply rounded-[2rem] border border-slate-200/80 bg-white/90 shadow-xl shadow-slate-200/60;
+  }
+
+  .section-label {
+    @apply text-xs font-black uppercase tracking-[0.25em] text-emerald-700 sm:text-sm;
+  }
+
+  .primary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-7 py-4 font-black text-white shadow-lg shadow-emerald-900/20 transition hover:bg-emerald-800;
+  }
+
+  .secondary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-emerald-700 bg-white px-7 py-4 font-black text-emerald-700 transition hover:bg-emerald-50;
+  }
+}
