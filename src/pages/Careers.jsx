@@ -59,78 +59,86 @@ const benefits = [
 export default function Careers() {
   return (
     <Layout>
-      <section className="relative overflow-hidden bg-[#f7f4ec] px-5 py-16 sm:py-20 lg:py-24">
-        <div className="absolute -right-20 top-0 h-96 w-96 rounded-full bg-emerald-200/60 blur-3xl" />
-        <div className="absolute -left-20 bottom-0 h-96 w-96 rounded-full bg-amber-200/70 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#f5efe2] px-5 py-16 sm:py-20 lg:py-24">
+        <div className="absolute -right-20 top-0 h-96 w-96 rounded-full bg-[#d4af37]/35 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-96 w-96 rounded-full bg-[#4b4b4b]/15 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-emerald-700 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/50 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#8a6a12] shadow-sm">
               <BriefcaseBusiness size={16} />
               Careers at Golden Cares
             </div>
 
-            <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.05] text-slate-950 sm:text-5xl lg:text-7xl">
+            <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[1.05] text-[#111111] sm:text-5xl lg:text-7xl">
               Join a care team built around purpose and people.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#555555] sm:text-lg">
               Golden Cares LLC is preparing career opportunities for directors,
               house managers, DSPs, and transportation drivers who want to help
               individuals live with dignity, safety, and support.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#open-roles" className="primary-btn">
+              <a
+                href="#open-roles"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111111] px-7 py-4 font-black text-[#f4d46b] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:bg-[#2a2a2a]"
+              >
                 View Open Roles <ArrowRight size={18} />
               </a>
 
-              <Link to="/contact" className="secondary-btn">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d4af37]/60 bg-white/85 px-7 py-4 font-black text-[#111111] shadow-sm transition hover:-translate-y-1 hover:bg-[#fff6d8]"
+              >
                 Ask About Hiring
               </Link>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}>
-            <div className="rounded-[2.5rem] bg-white p-5 shadow-2xl shadow-slate-300/60">
-              <div className="rounded-[2rem] bg-slate-950 p-6 text-white">
-                <p className="text-sm font-black uppercase tracking-[0.22em] text-amber-400">
+            <div className="rounded-[2.5rem] bg-white p-5 shadow-2xl shadow-black/15">
+              <div className="rounded-[2rem] bg-[#111111] p-6 text-white">
+                <p className="text-sm font-black uppercase tracking-[0.22em] text-[#d4af37]">
                   Hiring Focus
                 </p>
 
                 <div className="mt-6 grid gap-4">
                   {["Director", "House Managers", "DSP", "Transportation Drivers"].map((role) => (
-                    <div key={role} className="flex items-center gap-3 rounded-2xl bg-white/10 p-4">
-                      <CheckCircle className="shrink-0 text-amber-400" />
+                    <div key={role} className="flex items-center gap-3 rounded-2xl border border-[#d4af37]/20 bg-white/10 p-4">
+                      <CheckCircle className="shrink-0 text-[#d4af37]" />
                       <p className="font-black">{role}</p>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-6 rounded-2xl bg-emerald-700 p-5">
-                  <p className="font-black">Application Area Ready</p>
-                  <p className="mt-2 text-sm leading-6 text-white/75">
-                    This page can connect later to a form, email, job board, or
-                    applicant tracking process.
-                  </p>
-                </div>
+                <Link
+                  to="/contact"
+                  className="mt-6 flex items-center justify-between gap-4 rounded-2xl bg-[#d4af37] p-5 text-[#111111] transition hover:bg-[#f4d46b]"
+                >
+                  <p className="font-black">Apply Now</p>
+                  <ArrowRight className="shrink-0" size={22} />
+                </Link>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section id="open-roles" className="bg-white px-5 py-16 sm:py-20">
+      <section id="open-roles" className="bg-[#fbfaf7] px-5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="section-label">Open Roles</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-5xl">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#a67c00]">
+                Open Roles
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-[#111111] sm:text-5xl">
                 Career paths with real impact.
               </h2>
             </div>
 
-            <p className="max-w-2xl leading-8 text-slate-600 lg:ml-auto">
+            <p className="max-w-2xl leading-8 text-[#555555] lg:ml-auto">
               Each role card is ready for pay range, requirements, schedule,
               location, application link, and responsibilities once the client
               provides the official hiring details.
@@ -148,38 +156,38 @@ export default function Careers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  className="rounded-[2.25rem] border border-slate-200 bg-slate-50 p-6 transition hover:bg-white hover:shadow-2xl hover:shadow-slate-200/80"
+                  className="rounded-[2.25rem] border border-[#d4af37]/20 bg-white p-6 transition hover:shadow-2xl hover:shadow-black/10"
                 >
                   <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">
+                      <p className="text-xs font-black uppercase tracking-[0.22em] text-[#a67c00]">
                         {role.type}
                       </p>
 
-                      <h3 className="mt-2 text-3xl font-black text-slate-950">
+                      <h3 className="mt-2 text-3xl font-black text-[#111111]">
                         {role.title}
                       </h3>
                     </div>
 
-                    <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-emerald-700 text-white">
+                    <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#111111] text-[#f4d46b]">
                       <Icon size={28} />
                     </div>
                   </div>
 
-                  <p className="mt-5 leading-8 text-slate-600">{role.description}</p>
+                  <p className="mt-5 leading-8 text-[#555555]">{role.description}</p>
 
                   <div className="mt-6 grid gap-3">
                     {role.highlights.map((item) => (
                       <div key={item} className="flex gap-3">
-                        <CheckCircle className="mt-1 shrink-0 text-emerald-700" size={18} />
-                        <p className="text-sm font-bold text-slate-700">{item}</p>
+                        <CheckCircle className="mt-1 shrink-0 text-[#a67c00]" size={18} />
+                        <p className="text-sm font-bold text-[#555555]">{item}</p>
                       </div>
                     ))}
                   </div>
 
                   <Link
                     to="/contact"
-                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-black text-white transition hover:bg-emerald-800"
+                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3 font-black text-[#f4d46b] transition hover:bg-[#2a2a2a]"
                   >
                     Apply / Inquire <ArrowRight size={16} />
                   </Link>
@@ -190,10 +198,10 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="bg-emerald-900 px-5 py-16 text-white sm:py-20">
+      <section className="bg-[#171717] px-5 py-16 text-white sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-amber-400">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#d4af37]">
               Why Work With Us
             </p>
 
@@ -210,8 +218,8 @@ export default function Careers() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             {benefits.map(([title, text, Icon]) => (
-              <div key={title} className="rounded-[2rem] bg-white/10 p-6">
-                <Icon className="mb-5 text-amber-400" size={36} />
+              <div key={title} className="rounded-[2rem] border border-[#d4af37]/20 bg-white/10 p-6">
+                <Icon className="mb-5 text-[#d4af37]" size={36} />
                 <h3 className="text-xl font-black">{title}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/65">{text}</p>
               </div>
@@ -220,16 +228,16 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="bg-amber-50 px-5 py-16 sm:py-20">
+      <section className="bg-[#f5efe2] px-5 py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
-          <div className="rounded-[2.5rem] bg-white p-8 shadow-xl shadow-slate-200/70 sm:p-10">
-            <ClipboardList className="mb-5 text-emerald-700" size={44} />
+          <div className="rounded-[2.5rem] bg-white p-8 shadow-xl shadow-black/10 sm:p-10">
+            <ClipboardList className="mb-5 text-[#a67c00]" size={44} />
 
-            <h2 className="text-3xl font-black text-slate-950 sm:text-5xl">
+            <h2 className="text-3xl font-black text-[#111111] sm:text-5xl">
               Application process placeholder.
             </h2>
 
-            <p className="mt-5 leading-8 text-slate-600">
+            <p className="mt-5 leading-8 text-[#555555]">
               Once the client provides exact hiring instructions, this section
               can include an application form, upload resume field, role
               selection, eligibility questions, and contact details.
@@ -244,14 +252,17 @@ export default function Careers() {
               "Begin onboarding and training",
             ].map((step, index) => (
               <div key={step} className="flex gap-4 rounded-[2rem] bg-white p-5 shadow-sm">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-emerald-700 font-black text-white">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#111111] font-black text-[#f4d46b]">
                   {index + 1}
                 </div>
-                <p className="font-bold leading-7 text-slate-700">{step}</p>
+                <p className="font-bold leading-7 text-[#555555]">{step}</p>
               </div>
             ))}
 
-            <Link to="/contact" className="primary-btn">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111111] px-7 py-4 font-black text-[#f4d46b] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:bg-[#2a2a2a]"
+            >
               Start Career Inquiry <ArrowRight size={18} />
             </Link>
           </div>

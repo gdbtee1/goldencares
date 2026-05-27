@@ -15,17 +15,23 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="!sticky !top-0 !z-50 !border-b !border-[#d4af37]/20 !bg-[#111111] !backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5">
-        <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
-          <div className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-500 text-white">
+        <Link
+          to="/"
+          onClick={() => setOpen(false)}
+          className="flex items-center gap-3"
+        >
+          <div className="grid h-12 w-12 place-items-center rounded-2xl !bg-[#d4af37] !text-[#111111] shadow-lg shadow-black/20">
             <HeartHandshake size={28} />
           </div>
+
           <div>
-            <h1 className="text-lg font-black uppercase leading-none text-slate-900">
+            <h1 className="text-lg font-black uppercase leading-none !text-white">
               Golden Cares LLC
             </h1>
-            <p className="mt-1 text-xs font-bold uppercase tracking-widest text-emerald-700">
+
+            <p className="mt-1 text-xs font-bold uppercase tracking-widest !text-[#d4af37]">
               Compassionate care services
             </p>
           </div>
@@ -38,7 +44,9 @@ export default function Navbar() {
               to={path}
               className={({ isActive }) =>
                 `text-sm font-bold transition ${
-                  isActive ? "text-emerald-700" : "text-slate-600 hover:text-emerald-700"
+                  isActive
+                    ? "!text-[#d4af37]"
+                    : "!text-gray-300 hover:!text-[#f4d46b]"
                 }`
               }
             >
@@ -49,21 +57,21 @@ export default function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white transition hover:bg-emerald-800 lg:block"
+          className="hidden rounded-full !bg-[#d4af37] px-5 py-3 text-sm font-black !text-[#111111] shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:!bg-[#f4d46b] lg:block"
         >
           Request Care
         </Link>
 
         <button
           onClick={() => setOpen(!open)}
-          className="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-xl !border !border-[#d4af37]/20 !bg-[#1b1b1b] !text-[#f4d46b] lg:hidden"
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-slate-200 bg-white px-5 py-4 lg:hidden">
+        <nav className="!border-t !border-[#d4af37]/10 !bg-[#171717] px-5 py-4 lg:hidden">
           <div className="grid gap-2">
             {links.map(([name, path]) => (
               <NavLink
@@ -71,8 +79,10 @@ export default function Navbar() {
                 to={path}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `rounded-xl px-4 py-4 font-bold ${
-                    isActive ? "bg-emerald-700 text-white" : "bg-slate-50 text-slate-700"
+                  `rounded-2xl px-4 py-4 font-black transition ${
+                    isActive
+                      ? "!bg-[#d4af37] !text-[#111111]"
+                      : "!bg-[#222222] !text-gray-200 hover:!bg-[#2b2b2b]"
                   }`
                 }
               >
