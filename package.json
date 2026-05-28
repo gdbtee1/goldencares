@@ -1,6 +1,6 @@
 {
   "name": "golden-cares-llc",
-  "homepage": "https://gdbtee1.github.io/goldencares",
+  "homepage": "https://mygoldencares.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

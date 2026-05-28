@@ -116,9 +116,8 @@ export default function Home() {
           >
             <div className="relative rounded-[2.5rem] bg-white p-4 shadow-2xl shadow-black/15">
               <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] sm:min-h-[500px]">
-               <img
-  src="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=1200"
-  alt="Caregiver supporting a senior adult"
+           <img
+  src="https://images.pexels.com/photos/4262424/pexels-photo-4262424.jpeg?auto=compress&cs=tinysrgb&w=1200&v=10"
   className="absolute inset-0 h-full w-full object-cover"
 />
 
