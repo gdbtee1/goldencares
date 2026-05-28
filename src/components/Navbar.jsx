@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, HeartHandshake } from "lucide-react";
-
+import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.jpeg";
 const links = [
   ["Home", "/"],
   ["About Us", "/about"],
@@ -22,9 +22,13 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
           className="flex items-center gap-3"
         >
-          <div className="grid h-12 w-12 place-items-center rounded-2xl !bg-[#d4af37] !text-[#111111] shadow-lg shadow-black/20">
-            <HeartHandshake size={28} />
-          </div>
+         <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/20">
+  <img
+    src={logo}
+    alt="Golden Cares Logo"
+    className="h-full w-full object-cover"
+  />
+</div>
 
           <div>
             <h1 className="text-lg font-black uppercase leading-none !text-white">
