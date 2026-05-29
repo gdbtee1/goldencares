@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.jpeg";
+
 const links = [
   ["Home", "/"],
   ["About Us", "/about"],
@@ -22,13 +23,13 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
           className="flex items-center gap-3"
         >
-         <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/20">
- <img
-  src={logo}
-  alt="Golden Cares Logo"
-  className="h-full w-full object-cover"
-/>
-</div>
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/20">
+            <img
+              src={logo}
+              alt="Golden Cares Logo"
+              className="h-full w-full object-cover"
+            />
+          </div>
 
           <div>
             <h1 className="text-lg font-black uppercase leading-none !text-white">
@@ -68,34 +69,40 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="grid h-11 w-11 place-items-center rounded-xl !border !border-[#d4af37]/20 !bg-[#1b1b1b] !text-[#f4d46b] lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-xl !border !border-[#d4af37]/20 !bg-[#1b1b1b] !text-[#f4d46b] transition-all duration-300 hover:scale-105 lg:hidden"
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
 
-      {open && (
-        <nav className="!border-t !border-[#d4af37]/10 !bg-[#171717] px-5 py-4 lg:hidden">
-          <div className="grid gap-2">
-            {links.map(([name, path]) => (
-              <NavLink
-                key={path}
-                to={path}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `rounded-2xl px-4 py-4 font-black transition ${
-                    isActive
-                      ? "!bg-[#d4af37] !text-[#111111]"
-                      : "!bg-[#222222] !text-gray-200 hover:!bg-[#2b2b2b]"
-                  }`
-                }
-              >
-                {name}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
-      )}
+      <nav
+        className={`overflow-hidden !border-t !border-[#d4af37]/10 !bg-[#171717] px-5 transition-all duration-300 ease-out lg:hidden ${
+          open ? "max-h-[500px] py-4 opacity-100" : "max-h-0 py-0 opacity-0"
+        }`}
+      >
+        <div
+          className={`grid gap-2 transition-all duration-300 ease-out ${
+            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+          }`}
+        >
+          {links.map(([name, path]) => (
+            <NavLink
+              key={path}
+              to={path}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `rounded-2xl px-4 py-4 font-black transition-all duration-200 ${
+                  isActive
+                    ? "!bg-[#d4af37] !text-[#111111] shadow-lg shadow-[#d4af37]/20"
+                    : "!bg-[#222222] !text-gray-200 hover:!bg-[#2b2b2b] hover:translate-x-1 hover:!text-[#f4d46b]"
+                }`
+              }
+            >
+              {name}
+            </NavLink>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }
