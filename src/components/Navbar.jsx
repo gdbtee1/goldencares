@@ -26,7 +26,6 @@ export default function Navbar() {
  <img
   src={logo}
   alt="Golden Cares Logo"
-  style={{ border: "5px solid red" }}
   className="h-full w-full object-cover"
 />
 </div>
