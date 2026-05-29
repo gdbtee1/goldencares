@@ -56,6 +56,8 @@ const benefits = [
   ["Mission Driven", "Help people stay safe, connected, and supported.", ShieldCheck],
 ];
 
+const applicationForm = "https://forms.gle/wz2Z3Ebk1ceUcx5x8";
+
 export default function Careers() {
   return (
     <Layout>
@@ -88,12 +90,14 @@ export default function Careers() {
                 View Open Roles <ArrowRight size={18} />
               </a>
 
-              <Link
-                to="/contact"
+              <a
+                href={applicationForm}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d4af37]/60 bg-white/85 px-7 py-4 font-black text-[#111111] shadow-sm transition hover:-translate-y-1 hover:bg-[#fff6d8]"
               >
                 Ask About Hiring
-              </Link>
+              </a>
             </div>
           </motion.div>
 
@@ -113,13 +117,15 @@ export default function Careers() {
                   ))}
                 </div>
 
-                <Link
-                  to="/contact"
+                <a
+                  href={applicationForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-6 flex items-center justify-between gap-4 rounded-2xl bg-[#d4af37] p-5 text-[#111111] transition hover:bg-[#f4d46b]"
                 >
                   <p className="font-black">Apply Now</p>
                   <ArrowRight className="shrink-0" size={22} />
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -185,12 +191,14 @@ export default function Careers() {
                     ))}
                   </div>
 
-                  <Link
-                    to="/contact"
+                  <a
+                    href={applicationForm}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3 font-black text-[#f4d46b] transition hover:bg-[#2a2a2a]"
                   >
                     Apply / Inquire <ArrowRight size={16} />
-                  </Link>
+                  </a>
                 </motion.article>
               );
             })}
@@ -259,12 +267,14 @@ export default function Careers() {
               </div>
             ))}
 
-            <Link
-              to="/contact"
+            <a
+              href={applicationForm}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111111] px-7 py-4 font-black text-[#f4d46b] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:bg-[#2a2a2a]"
             >
               Start Career Inquiry <ArrowRight size={18} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
