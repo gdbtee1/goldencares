@@ -23,11 +23,12 @@ export default function Navbar() {
           className="flex items-center gap-3"
         >
          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/20">
-  <img
-    src={logo}
-    alt="Golden Cares Logo"
-    className="h-full w-full object-cover"
-  />
+ <img
+  src={logo}
+  alt="Golden Cares Logo"
+  style={{ border: "5px solid red" }}
+  className="h-full w-full object-cover"
+/>
 </div>
 
           <div>
