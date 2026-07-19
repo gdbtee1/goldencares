@@ -91,7 +91,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-black text-[#111111]">Service Area</p>
-                  <p className="mt-1 text-sm text-[#555555]">Cleveland, Ohio</p>
+                  <p className="mt-1 text-sm text-[#555555]">Willoughby, OH 44094</p>
                 </div>
               </div>
             </div>
@@ -255,14 +255,14 @@ export default function Contact() {
           </div>
 
           <div className="overflow-hidden rounded-[2.5rem] border border-[#d4af37]/20 bg-white p-4 shadow-xl shadow-black/10">
-            <iframe
-              title="Golden Cares service area map - Cleveland Ohio"
-              src="https://www.google.com/maps?q=Cleveland%2C%20Ohio&output=embed"
-              className="h-[360px] w-full rounded-[2rem] border-0 sm:h-[450px]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
+           <iframe
+  title="Golden Cares service area map - Willoughby Ohio"
+  src="https://www.google.com/maps?q=Willoughby%2C%20Ohio&output=embed"
+  className="h-[360px] w-full rounded-[2rem] border-0 sm:h-[450px]"
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  allowFullScreen
+/>
           </div>
         </div>
       </section>

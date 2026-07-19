@@ -36,7 +36,7 @@ export default function Footer() {
           <h3 className="font-black uppercase text-amber-400">Contact</h3>
           <p className="mt-4 text-sm text-white/60">216-559-8570</p>
           <p className="mt-2 text-sm text-white/60">goldencaresllc@gmail.com</p>
-          <p className="mt-2 text-sm text-white/60">Cleveland, Ohio</p>
+          <p className="mt-2 text-sm text-white/60">Willoughby, OH 44094</p>
         </div>
       </div>
 
